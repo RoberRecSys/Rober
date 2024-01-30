@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__shape2prog_csail_mit_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+              <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="http://shape2prog.csail.mit.edu/images/favicon.ico">
+        <meta name="description" content="Recommendation with Causality enhanced Natural Language Explanations">
+        <meta name="keywords" content="Recommendation with Causality enhanced Natural Language Explanations">
+
+        <title>Active Explainable Recommendation with Limited Labeling Budget</title>
+        <link rel="stylesheet" href="asset/font.css">
+        <link rel="stylesheet" href="asset/main.css">
+
+    </head>
+
+    <body data-gr-c-s-loaded="true">
+
+        <div class="outercontainer">
+            <div class="container">
+
+                <div class="content project_title">
+                    <h1>Active Explainable Recommendation with </br> Limited Labeling Budget</h1>
+                </div>
+
+
+                <div class="content">
+                    <div class="text">
+                        <h1>1. Abstract</h1>
+                        <p><font size=3>
+Explainable recommendation has gained significant attention due to its potential to enhance user trust and system transparency.
+Previous studies primarily focus on refining model architectures to generate more informative explanations, assuming that the explanation data is sufficient and easy to acquire.
+However, in practice, obtaining the ground truth for explanations can be costly since individuals may not be inclined to put additional efforts to provide behavior explanations.
+In this paper, we study a novel problem in the field of explainable recommendation, that is, “given a limited budget to incentivize users to provide behavior explanations, how to effectively collect data such that the downstream models can be better optimized?”
+To solve this problem, we propose an active learning framework for recommender system, which consists of an acquisition function for sample collection and an explainable recommendation model to provide the final results.
+We consider both uncertainty and influence based strategies to design the acquisition function, which can determine the sample effectiveness from compensate perspectives.
+To demonstrate the effectiveness of our framework, we conduct extensive experiment based on real-world datasets.
+			</font></p>
+			    
+			    <h3>Contributions</h3>
+                            <p><ul class="download">
+			    <font size=3>
+                            <li>We propose that obtaining the ground truth for explanations is costly and present a novel problem: how to effectively collect the explainable user behavior data with a limited budget. To the best of our knowledge, it is the first time in the field of recommendation system.</li>
+			    <li>To solve this problem, we propose a unified active learning framework for explainable recommendation. In this framework, we design two strategies from different perspectives to assess the importance of user-item pairs.</li>
+			    <li>We conduct extensive experiments on the task of recommendation with natural language explanations to demonstrate the effectiveness of our framework. To benefit the research community, we have released our code at this page.</li>
+                            </font>
+                    </div>
+                </div>
+			
+			
+			
+			
+			
+                <div class="content">
+                    <div class="text">
+                        <h1>2. Main Results</h1>
+                    </div>
+
+                    <div class="content project_headline">
+					<div class="text">
+                            <p><font size=3>
+				Table 1: Overall comparison between different selection strategies. 
+	For BLEU and ROUGE, the results are percentage values with "%" omitted. 
+	For RMSE, a lower value indicates better performance. 
+	For each dataset and evaluation metric, we use bold fonts to label the best performance. 
+	The performance improvements of our method are significant under paired <i>t</i>-test with <i>p</i><0.05.		    
+			   </font></p>
+                        </div>
+                        <div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/exp_results1.png" alt="result" style="margin:auto;max-width:99%">
+			</div>
+                    </div>		
+                </div>
+			
+			
+			
+			
+			
+		<div class="content">
+                    <div class="text">
+                        <h1>3. Dataset and Code</h1>
+			    
+			<h2>3.1 Dataset <a href="https://drive.google.com/file/d/1xRyKFlNDa0JMaUDf_SSAkO1Lhzsei_tx/view?usp=drive_link">[link:Google Driver]</a></font></h2>
+			<div class="content project_headline">
+			<div class="text">
+                            <p style="text-align:center"><font size=3>Table 2: Statistics of the datasets.</font></p>
+                        </div>
+                        <div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/dataset.png" alt="result" style="margin:auto;max-width:70%">
+                        </div>
+
+			<h2 style="text-align:left"> 3.2 Code <a href="https://drive.google.com/file/d/1qpZj4sccf_v7wv5shgCS5T1QlA-B3JhR/view?usp=drive_link">[link:Google Driver]</a></font></h2>
+			<div class="content project_headline">
+			<div class="text">
+			    <p style="text-align:center"><font size=3>Table 3: Structure of the code files.</font></p>
+                        </div>
+			<div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/file.png" alt="result" style="margin:auto;max-width:60%">
+                        </div>
+
+                    </div>
+                </div>
+
+			
+			
+			
+
+                <div class="content">
+                    <div class="text">
+                        <h1>4. Usage</h1>
+				<h2>4.1. Download the dataset and code, then put the dataset into code folder.</h2>
+				<h2>4.2. Quick Start </h2>
+				<p> <font size=3>Execute run_active.py and set additional command parameters:</p>
+					<div class="img" style="text-align:center">
+					<img class="img_responsive" src="asset/quick_run.png" alt="result" style="margin:auto;max-width:70%">
+					</div>
+                    </div>
+                </div>
+               
+
+	
+			
+
+                <div class="content">
+                    <div class="text">
+                        <h1>5. Runtime Environment</h1>
+						<ul class="download">
+						<font size=3>
+                            				<li><p>Linux System: 5.13.0-44-generic</p></li>
+							<li><p>CPU: Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz</p></li>
+							<li><p>GPU: NVIDIA Corporation Device 2204 (rev a1)</p></li>
+                           				<li><p>GPU-Memory: 24G</p></li>
+							<li><p>Python: 3.8.12</p></li>
+							<li><p>Pytorch: 1.10.1</p></li>
+							<li><p>CUDA: 11.3</p></li>
+						</font>
+                        </ul>
+						
+                    </div>
+                </div>
+
+<div id="download_plus_animation"></div></body></html>
