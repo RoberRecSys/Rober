@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="gr__shape2prog_csail_mit_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
               <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="http://shape2prog.csail.mit.edu/images/favicon.ico">
-        <meta name="description" content="Recommendation with Causality enhanced Natural Language Explanations">
-        <meta name="keywords" content="Recommendation with Causality enhanced Natural Language Explanations">
+        <meta name="description" content="Natural Language Explainable Recommendation with Robustness Enhancement">
+        <meta name="keywords" content="Natural Language Explainable Recommendation with Robustness Enhancement">
 
-        <title>Active Explainable Recommendation with Limited Labeling Budget</title>
+        <title>Natural Language Explainable Recommendation with Robustness Enhancement</title>
         <link rel="stylesheet" href="asset/font.css">
         <link rel="stylesheet" href="asset/main.css">
 
@@ -17,7 +17,7 @@
             <div class="container">
 
                 <div class="content project_title">
-                    <h1>Active Explainable Recommendation with </br> Limited Labeling Budget</h1>
+                    <h1>Natural Language Explainable Recommendation </br> with Robustness Enhancement</h1>
                 </div>
 
 
@@ -25,21 +25,26 @@
                     <div class="text">
                         <h1>1. Abstract</h1>
                         <p><font size=3>
-Explainable recommendation has gained significant attention due to its potential to enhance user trust and system transparency.
-Previous studies primarily focus on refining model architectures to generate more informative explanations, assuming that the explanation data is sufficient and easy to acquire.
-However, in practice, obtaining the ground truth for explanations can be costly since individuals may not be inclined to put additional efforts to provide behavior explanations.
-In this paper, we study a novel problem in the field of explainable recommendation, that is, “given a limited budget to incentivize users to provide behavior explanations, how to effectively collect data such that the downstream models can be better optimized?”
-To solve this problem, we propose an active learning framework for recommender system, which consists of an acquisition function for sample collection and an explainable recommendation model to provide the final results.
-We consider both uncertainty and influence based strategies to design the acquisition function, which can determine the sample effectiveness from compensate perspectives.
-To demonstrate the effectiveness of our framework, we conduct extensive experiment based on real-world datasets.
+			Natural language explainable recommendation aims to provide users with textual explanations for recommendations. 
+			Previous studies has demonstrated that recommendation models are vulnerable to performance degradation when exposed to small yet targeted perturbations. 
+			While these studies primarily focus on the robustness of classification tasks associated with specific category labels, similar challenges arise in generating explanations, which is essentially sequence generation task.
+			Notably, we observe that for similar user-item pairs, the generated explanations may differ significantly.
+			This inconsistency in explanations can potentially lead to user confusion and undermine the credibility of the system.
+				
+			To address this concern, we formulate the robustness objective for generating recommendation explanations and propose a robustness-enhanced framework based on adversarial learning. 
+			Specifically, when acquiring targeted adversarial examples, we consider two crucial characteristics of textual explanations:
+			the variance in word importance and the flexibility in word semantics.
+			To capture these characteristics, we design dedicated methods for importance estimation and synonyms mining for each word in the sentence.
+			Moreover, to establish effective collaboration between these characteristics, we develop a joint learning framework based on multi-agent reinforcement learning, where each task is assigned an agent that is coordinated through a shared reward mechanism.
+			We conduct extensive experiments based on three real-world datasets to verify the performance and robustness improvements of our framework.
 			</font></p>
 			    
 			    <h3>Contributions</h3>
                             <p><ul class="download">
 			    <font size=3>
-                            <li>We propose that obtaining the ground truth for explanations is costly and present a novel problem: how to effectively collect the explainable user behavior data with a limited budget. To the best of our knowledge, it is the first time in the field of recommendation system.</li>
-			    <li>To solve this problem, we propose a unified active learning framework for explainable recommendation. In this framework, we design two strategies from different perspectives to assess the importance of user-item pairs.</li>
-			    <li>We conduct extensive experiments on the task of recommendation with natural language explanations to demonstrate the effectiveness of our framework. To benefit the research community, we have released our code at this page.</li>
+                            <li>We formulate the robustness objective in sequence generation and propose a robustness-enhanced framework for natural language explainable recommendation.To the best of our knowledge, it it the first time in the recommendation domain.</li>
+			    <li>To model the two key characteristics of textual explanations, we design both context-free and context-aware methods for importance estimation and synonyms mining of the words in the sequence. Furthermore, a multi-agent reinforcement learning based framework is developed to achieve effective collaboration between these tasks.</li>
+			    <li>Extensive experiments on three real-word datasets demonstrate the improvements achieved by our framework on the quality and robustness of explanations.</li>
                             </font>
                     </div>
                 </div>
@@ -47,49 +52,23 @@ To demonstrate the effectiveness of our framework, we conduct extensive experime
 			
 			
 			
-			
-                <div class="content">
-                    <div class="text">
-                        <h1>2. Main Results</h1>
-                    </div>
-
-                    <div class="content project_headline">
-					<div class="text">
-                            <p><font size=3>
-				Table 1: Overall comparison between different selection strategies. 
-	For BLEU and ROUGE, the results are percentage values with "%" omitted. 
-	For RMSE, a lower value indicates better performance. 
-	For each dataset and evaluation metric, we use bold fonts to label the best performance. 
-	The performance improvements of our method are significant under paired <i>t</i>-test with <i>p</i><0.05.		    
-			   </font></p>
-                        </div>
-                        <div class="img" style="text-align:center">
-                            <img class="img_responsive" src="asset/exp_results1.png" alt="result" style="margin:auto;max-width:99%">
-			</div>
-                    </div>		
-                </div>
-			
-			
-			
-			
-			
 		<div class="content">
                     <div class="text">
-                        <h1>3. Dataset and Code</h1>
+                        <h1>2. Dataset and Code</h1>
 			    
-			<h2>3.1 Dataset <a href="https://drive.google.com/file/d/1xRyKFlNDa0JMaUDf_SSAkO1Lhzsei_tx/view?usp=drive_link">[link:Google Driver]</a></font></h2>
+			<h2>2.1 Dataset <a href="https://drive.google.com/file/d/1xRyKFlNDa0JMaUDf_SSAkO1Lhzsei_tx/view?usp=drive_link">[link:Google Driver]</a></font></h2>
 			<div class="content project_headline">
 			<div class="text">
-                            <p style="text-align:center"><font size=3>Table 2: Statistics of the datasets.</font></p>
+                            <p style="text-align:center"><font size=3>Table 1: Statistics of the datasets.</font></p>
                         </div>
                         <div class="img" style="text-align:center">
                             <img class="img_responsive" src="asset/dataset.png" alt="result" style="margin:auto;max-width:70%">
                         </div>
 
-			<h2 style="text-align:left"> 3.2 Code <a href="https://drive.google.com/file/d/1qpZj4sccf_v7wv5shgCS5T1QlA-B3JhR/view?usp=drive_link">[link:Google Driver]</a></font></h2>
+			<h2 style="text-align:left"> 2.2 Code <a href="https://drive.google.com/file/d/1qpZj4sccf_v7wv5shgCS5T1QlA-B3JhR/view?usp=drive_link">[link:Google Driver]</a></font></h2>
 			<div class="content project_headline">
 			<div class="text">
-			    <p style="text-align:center"><font size=3>Table 3: Structure of the code files.</font></p>
+			    <p style="text-align:center"><font size=3>Table 2: Structure of the code files.</font></p>
                         </div>
 			<div class="img" style="text-align:center">
                             <img class="img_responsive" src="asset/file.png" alt="result" style="margin:auto;max-width:60%">
@@ -104,10 +83,10 @@ To demonstrate the effectiveness of our framework, we conduct extensive experime
 
                 <div class="content">
                     <div class="text">
-                        <h1>4. Usage</h1>
-				<h2>4.1. Download the dataset and code, then put the dataset into code folder.</h2>
-				<h2>4.2. Quick Start </h2>
-				<p> <font size=3>Execute run_active.py and set additional command parameters:</p>
+                        <h1>3. Usage</h1>
+				<h2>3.1. Download the dataset and code, then put the dataset into code folder.</h2>
+				<h2>3.2. Quick Start </h2>
+				<p> <font size=3>Execute run.py and set additional command parameters:</p>
 					<div class="img" style="text-align:center">
 					<img class="img_responsive" src="asset/quick_run.png" alt="result" style="margin:auto;max-width:70%">
 					</div>
@@ -120,7 +99,7 @@ To demonstrate the effectiveness of our framework, we conduct extensive experime
 
                 <div class="content">
                     <div class="text">
-                        <h1>5. Runtime Environment</h1>
+                        <h1>4. Runtime Environment</h1>
 						<ul class="download">
 						<font size=3>
                             				<li><p>Linux System: 5.13.0-44-generic</p></li>
