@@ -29,18 +29,15 @@
                     <div class="text">
                         <h1>1. Abstract</h1>
                         <p><font size=3>
-			Natural language explainable recommendation aims to provide users with textual explanations for recommendations. 
-			Previous studies has demonstrated that recommendation models are vulnerable to performance degradation when exposed to small yet targeted perturbations. 
-			While these studies primarily focus on the robustness of classification tasks associated with specific category labels, similar challenges arise in generating explanations, which is essentially sequence generation task.
-			Notably, we observe that for similar user-item pairs, the generated explanations may differ significantly.
-			This inconsistency in explanations can potentially lead to user confusion and undermine the credibility of the system.
-				
-			To address this concern, we formulate the robustness objective for generating recommendation explanations and propose a robustness-enhanced framework based on adversarial learning. 
-			Specifically, when acquiring targeted adversarial examples, we consider two crucial characteristics of textual explanations:
-			the variance in word importance and the flexibility in word semantics.
-			To capture these characteristics, we design dedicated methods for importance estimation and synonyms mining for each word in the sentence.
-			Moreover, to establish effective collaboration between these characteristics, we develop a joint learning framework based on multi-agent reinforcement learning, where each task is assigned an agent that is coordinated through a shared reward mechanism.
-			We conduct extensive experiments based on three real-world datasets to verify the performance and robustness improvements of our framework.
+Generating natural language explanations for the recommended items has become a promising strategy to facilitate more efficient and informed user decisions. 
+Previous models mostly focus on how to enhance the explanation accuracy. However, the robustness problem has been largely ignored, which requires the explanations generated for similar user-item pairs should not be too much different. 
+To bridge this gap, in this paper, we propose a novel direction for improving the robustness of generative explainable recommendation.
+To this end, we first identify two unique characteristics for improving the robustness of language generation tasks, that is: 
+(1) Different token importances, that is, different tokens play various roles in representing the complete sentence, and the robustness requirements for predicting them should also be different. 
+(2) Continuous token semantics, that is, the similarity of the output should be judged based on semantics, and the sequences without any token-level overlap may also be highly similar. 
+Inspired by these characteristics, we base our modeling on adversarial robust optimization and design four types of heuristic methods to modify the adversarial outputs with weighted token probabilities and synonym replacements. 
+Furthermore, to consider the mutual influence between the above characteristics, we regard sequence generation as a decision-making problem and design a dual-policy reinforcement learning model to improve the robustness of the generated languages.
+We conduct extensive experiments to demonstrate the effectiveness of our model. 
 			</font></p>
 			    
 			    <h3>Contributions</h3>
