@@ -26,7 +26,7 @@ Thanks for your insightful comments. We try to alleviate your concern one by one
 
 [5] UCEpic: Unifying Aspect Planning and Lexical Constraints for Generating Explanations in Recommendation(KDD '23)
 
-**R8**: The ablation study in Table 3 verify the significant role of the two characteristics in the robustness of generating explanations. They are complementary and both matter: assigning different importance weights to tokens helps emphasize the main points of the sentence, while replacements with synonyms enhances the expressiveness of the models. Moreover, unlike RecSys ranking metrics, text similarity metrics, especially BERTScore, are relatively stable, so minor changes can indicate performance improvement.
+**R8**: The ablation study in Table 3 verify the significant role of the two characteristics in the robustness of generating explanations. **They are complementary and both matter**: assigning different importance weights to tokens helps emphasize the main points of the sentence, while replacements with synonyms enhances the expressiveness of the models. Moreover, unlike RecSys ranking metrics, text similarity metrics, especially BERTScore, are relatively stable, so minor changes can indicate performance improvement.
 
 **R9**: Thanks for your suggestions. We'll definitely check that in the final version.
 
