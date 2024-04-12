@@ -1,10 +1,10 @@
 **Highlights:**
-- New base model: CER (The Problem of Coherence in Natural Language Explanations of Recommendations, ECAI '23)
-- New dataset from fashion domain: Amazon-ClothingShoesAndJewelry (AZ-CSJ)
+- New base model: **CER** (The Problem of Coherence in Natural Language Explanations of Recommendations, ECAI '23)
+- New dataset from fashion domain: Amazon-ClothingShoesAndJewelry (**AZ-CSJ**)
 
 |          Metrics          |   BLEU-1   | BLEU-4 | ROUGE-1 | ROUGE-2 |BS-F1 |BS-Recall|BS-Precision| MAE (&darr;) |
 |:-------------------------:|:----------:|:------:|:-------:|:-------:|:----------:|:---------:|:---------:|:-------:|
-| Dataset | **AZ-CSJ (New!)** |        |         |         |            |           |           |         |
+| Dataset | AZ-CSJ (**New!**) |        |         |         |            |           |           |         |
 |            CER            |   21.588   | 3.595  | 29.843  |  8.496  |   88.884   |  87.873   |  89.973   | 0.833   |
 |         CER-Rober         |   **21.760**   | **4.108**  | **30.144**  |  **8.727**  |   **89.111**   |  **88.165**   |  **90.127**   | **0.830**   |
 |       Dataset       | YELP |        |         |         |            |           |           |         |
