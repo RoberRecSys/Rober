@@ -17,4 +17,24 @@
 |            CER            |   17.186   | 2.273  | 24.123  |  5.815  |   86.785   |  85.722   |  87.958   | 0.749   |
 |         CER-Rober         | **17.429** | **2.511**  | **25.436**  |  **6.427**  |  **87.125**  |  **85.857**   |  **88.511**   | **0.742**   |
 
-- Notes: "BS" represents "BERTScore". Bold font indicates the best performance. "&darr;" means that a lower value indicates better performance. 
+- Notes: "BS" represents "BERTScore". Bold font indicates the best performance. "&darr;" means that a lower value indicates better performance.
+
+---
+**Update:**
+- New base model: ERRA (Explainable Recommendation with Personalized Review Retrieval and Aspect Learning, ACL '23)
+
+|    Metrics     |      BLEU-1       |                    BLEU-4                     |                 ROUGE-1                 |             ROUGE-2              |           BS-F1            |      BS-Recall      | BS-Precision | MAE (&darr;) |
+|:--------------:|:-----------------:|:---------------------------------------------:|:---------------------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:------------:|:------------:|
+|    Dataset     | **AZ-CSJ (New!)** |                                               |                                         |                                  |                            |                     |              |              |
+|      ERRA      |      10.097	      |                    0.478	                     |                 10.861	                 |              1.059	              |          85.960	           |       85.439	       |   86.532	    |    0.860     |
+|   ERRA-Rober   |    **13.569**	    |                  **0.682**	                   |               **13.417**	               |            **1.349**	            |        **86.913**	         |     **86.271**	     | **87.596**	  |  **0.835**   |
+|    Dataset     |       YELP        |                                               |                                         |                                  |                            |                     |              |              |
+|      ERRA      |      3.948	       |                    0.193	                     |                 11.299	                 |              0.728	              |          86.762	           |       85.066	       |   88.563	    |    **0.912**     |
+|   ERRA-Rober   |     **4.038**	      |                  **0.195**	                   |               **11.347**	               |            **0.734**	            |        **86.824**	         |     **85.137**	     | **88.614**	  |  **0.912**   |
+|    Dataset     |       TA-HK       |                                               |                                         |                                  |                            |                     |              |              |
+|      ERRA      |     14.035	|                    0.482	                     |                 16.141	                 |              1.156	              |          85.733	           |       86.396	       |   85.109	    |    0.711     |
+|   ERRA-Rober   |    **16.287**	|                  **0.882**	                   |               **16.737**	               |            **2.247**	            |        **87.842**	         |     **86.895**	     | **88.842**	  |  **0.686**   |
+|    Dataset     |       AZ-MT       |                                               |                                         |                                  |                            |                     |              |              |
+|      ERRA      |      9.052	|                    0.569	                     |                 15.610	                 |              1.750	              |          87.279	           |       84.924	       |   89.813	    |    0.931     |
+|   ERRA-Rober   |   **9.289**	| **0.667**	| **16.352**	| **2.052**	| **87.540**	| **85.107**	| **90.155**	|    **0.892**     |
+
